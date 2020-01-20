@@ -11,16 +11,12 @@ Rails.application.routes.draw do
   # end
   root 'post#index'
 
-  resources :items do
-    member do
-      get 'show'
-      get 'step2'
-      get 'step3'
-      get 'step4'
-      get 'step5'
-      get 'step6'
-      get 'done'
-    end
+  resources :sell do
+      resources :purchase do
+        collection do
+          get 'show'
+        end
+      end
   end
 
   resources :signup do
