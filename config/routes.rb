@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   resources :mypage do
     collection  do
       get 'index'
+      get 'sell'
       get 'identification'
       get 'credit_card'
       get 'user_profile'

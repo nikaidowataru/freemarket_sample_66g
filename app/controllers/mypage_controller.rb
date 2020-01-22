@@ -11,4 +11,7 @@ class MypageController < ApplicationController
   def credit_card
   end
 
+  def new
+  end
+
 end
