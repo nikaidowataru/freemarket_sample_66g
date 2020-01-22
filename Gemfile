@@ -44,6 +44,11 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  # gem 'database_cleaner' #FactoryBotでDB登録したデータをテスト終了後にクリアする
+
 
 end
 
@@ -75,4 +80,8 @@ gem 'erb2haml'
 gem 'fog-aws'
 
 
+
+group :test do
+  gem 'faker', "~> 2.8"
+end
 

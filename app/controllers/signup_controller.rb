@@ -3,37 +3,43 @@ class SignupController < ApplicationController
   def step1
   end
 
-
+#newアクションの代わり。step2のビューへ移動。
   def step2
-    @user = User.new
+    @user = User.new #userクラスのインスタンスを作り@userでビューへ渡す。
+
   end
 
   def step3
+    #step2で入力したのをsessionへ保存
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
     session[:password] = user_params[:password]
-    session[:birth_year] = user_params[:birth_year]
-    session[:birth_month] = user_params[:birth_month]
-    session[:birth_day] = user_params[:birth_day]    
     session[:user_first_name] = user_params[:first_name] 
     session[:user_last_name] = user_params[:last_name]
     session[:user_first_name_kana] = user_params[:first_name_kana]
     session[:user_last_name_kana] = user_params[:last_name_kana]
+    session[:birth_year] = user_params[:birth_year]
+    session[:birth_month] = user_params[:birth_month]
+    session[:birth_day] = user_params[:birth_day]    
 
-    @user = User.new
+
+
+    @user = User.new #新規インスタンス作成
 
   end
 
   def step4
+    #step3で入力したのをsessionへ保存
     session[:phone_number] = user_params[:phone_number]
 
     
-    @user = User.new
+    @user = User.new #新規インスタンス作成
   end
 
   def step5
+    #step4で入力したのをsessionへ保存
 
-    @user = User.new
+    @user = User.new # 新規インスタンス作成
     @user.build_address
     
   end
@@ -53,6 +59,8 @@ class SignupController < ApplicationController
     @user = User.new
     @user.build_card
   end
+
+
 
   def create
     @user = User.new(
