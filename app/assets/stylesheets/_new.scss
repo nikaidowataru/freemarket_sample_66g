@@ -74,6 +74,11 @@
         line-height: 1.5;
         margin: 5px 0 15px;
       }
+      .post__drop__box__container{
+        .hidden-content{
+          display: none;
+        }
+      }
 
       &__sell-dropbox-container {
         display: inline;
