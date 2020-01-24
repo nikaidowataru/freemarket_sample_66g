@@ -1,7 +1,7 @@
 .body-phone2 {
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
   background-color: rgb(245, 245, 245);
-  height: 100vh;
+  // height: 100vh;
   .header {
     background-color: rgb(245, 245, 245);
     height: 120px;
@@ -131,6 +131,7 @@
       height: 100%;
       width: 50%;
       margin: auto;
+      padding-bottom: 40px;
       &__header {
         background-color: white;
         height: 100px;
