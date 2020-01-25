@@ -5,10 +5,6 @@ Rails.application.routes.draw do
     registrations: 'users/registrations',
   }
   root 'post#index'
-
-  resources :items do
-  end
-
   
   resources :items do
     resources :purchase do
