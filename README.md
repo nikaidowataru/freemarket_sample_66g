@@ -7,7 +7,7 @@
  
 ***DEMO:***
  
-(https://gyazo.com/65223f2ca60ddbc94e769c0717791381)
+https://gyazo.com/65223f2ca60ddbc94e769c0717791381
  
 ## Features
  
