@@ -11,56 +11,30 @@
  
 ## Features
  
-- Awesome function
-- Awesome UI
-- ...
- 
-For more information, see `awesome-tool --help`.
+・haml/SASS記法と、命名規則BEMを使ったマークアップ
+・ウィザード形式を用いたユーザー登録フォーム
+・SNS認証による新規登録、ログイン
+・pay.jpによる商品購入処理
+・capistranoによるAWS EC2への自動デプロイ
+・ActiveStorageを使用しAWS S3への画像アップロード
  
 ## Requirement
- 
-- Requirement
-- Requirement
-- Requirement
- 
-## Usage
- 
-1. Usage
-2. Usage
-3. Usage
+
+・Ruby 2.5.1
+・Rails 5.0.7
  
 ## Installation
- 
+
 ```
-$ git clone https://github.com/TomoakiTANAKA/awesome-tool
-$ cd awesome-tool
-$ sh setup.sh
-$ ~do anything~
+$ git clone https://github.com/WAKUZO/freemarket_sample_66g.git
+$ cd freemarket_sample_66g
+$ bundle install
 ```
- 
-## Test
- 
-1. test
-2. test
-3. test
- 
-## Deploy
- 
-1. deploy
-2. deploy
-3. deploy
- 
-## Anything Else
- 
-AnythingAnythingAnything
-AnythingAnythingAnything
-AnythingAnythingAnything
- 
+
 ## Author
- 
-[@TanakanoAnchan](https://twitter.com/TanakanoAnchan)
-mail to: xxxx@mail.com
+
+@takaking216 @yuevo16 @jujuju0924
  
 ## License
  
-[MIT](http://TomoakiTANAKA.mit-license.org)</blockquote>
+[MIT]
