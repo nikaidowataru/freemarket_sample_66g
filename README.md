@@ -11,17 +11,17 @@
  
 ## Features
  
-・haml/SASS記法と、命名規則BEMを使ったマークアップ
-・ウィザード形式を用いたユーザー登録フォーム
-・SNS認証による新規登録、ログイン
-・pay.jpによる商品購入処理
-・capistranoによるAWS EC2への自動デプロイ
-・ActiveStorageを使用しAWS S3への画像アップロード
+- haml/SASS記法と、命名規則BEMを使ったマークアップ
+- ウィザード形式を用いたユーザー登録フォーム
+- SNS認証による新規登録、ログイン
+- pay.jpによる商品購入処理
+- capistranoによるAWS EC2への自動デプロイ
+- ActiveStorageを使用しAWS S3への画像アップロード
  
 ## Requirement
 
-・Ruby 2.5.1
-・Rails 5.0.7
+- Ruby 2.5.1
+- Rails 5.0.7
  
 ## Installation
 
