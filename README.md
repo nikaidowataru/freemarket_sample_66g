@@ -22,6 +22,7 @@
 
 - Ruby 2.5.1
 - Rails 5.0.7
+- MySQL 5.6
  
 ## Installation
 
