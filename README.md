@@ -32,7 +32,3 @@ $ bundle install
 ## Author
 
 @takaking216 @yuevo16 @jujuju0924 @WAKUZO
- 
-## License
- 
-[MIT]
