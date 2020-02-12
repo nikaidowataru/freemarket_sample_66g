@@ -44,7 +44,7 @@ http://18.177.134.226/
 - Ruby 2.5.1
 - Rails 5.0.7
  
-## Installation
+## Usage
 
 ```
 $ git clone https://github.com/WAKUZO/freemarket_sample_66g.git
