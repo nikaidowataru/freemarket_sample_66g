@@ -2,9 +2,7 @@
  
 フリマアプリ「メルカリ」のクローンサイト。
 
-![メルカリクローン](https://gyazo.com/da96e51a44910b73fef47f814747ab0d)
-
-<img width="500" src="https://gyazo.com/da96e51a44910b73fef47f814747ab0d">
+![メルカリクローン](https://gyazo.com/da96e51a44910b73fef47f814747ab0d/raw)
 
 ## App URL
 
