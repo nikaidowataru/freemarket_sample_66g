@@ -7,6 +7,10 @@
 ## App URL
 
 http://18.177.134.226/
+Basic認証をかけています。ご覧の際は以下のIDとPassを入力してください。
+- Basic認証
+ - ID:mercari
+ - PASS:6666
  
 ## Description
 
