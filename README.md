@@ -2,7 +2,7 @@
  
 フリマアプリ「メルカリ」のクローンサイト。
 
-![メルカリクローン](https://gyazo.com/da96e51a44910b73fef47f814747ab0d/raw)
+![TOPページ](https://gyazo.com/da96e51a44910b73fef47f814747ab0d/raw)
 
 ## App URL
 
@@ -16,9 +16,9 @@ http://18.177.134.226/
  
 - haml/scss記法と、命名規則BEMを使ったマークアップ
 - ウィザード形式を用いたユーザー登録フォーム
-- SNS認証による新規登録、ログイン
+- SNS認証による新規登録、ログイン(ローカル環境のみ)
 - pay.jpによる商品購入処理
-- 商品の検索機能
+- 商品検索機能
 - capistranoによるAWS EC2への自動デプロイ
 - ActiveStorageを使用しAWS S3への画像アップロード
  
