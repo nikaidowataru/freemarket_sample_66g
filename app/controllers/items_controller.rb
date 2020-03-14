@@ -3,7 +3,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @user = User.find(@item.user_id)
-    @image = @item.images[0].image
+    @images = @item.images
     @category = Category.find(@item.category)
     @delivery_chage = Delivery_chage.find(@item.delivery_chage)
     @status = Status.find(@item.status)

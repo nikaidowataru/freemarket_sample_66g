@@ -31,21 +31,19 @@
           height: 375px;
           width: 300px;
           background-color: #f5f5f5f5;
-          padding: 0 30px;
-
           &__top{
-            // background-color: red;
             height: 300px;
-            
+            width: 100%;
+            &__view {
+              width: 100%;
+            }
           }
           &__bottom{
-            display: fle;
+            display: flex;
             &__column{
+              background-color: rgb(143, 143, 143);
               height: 60px;
               width: 60px;
-
-              // background-color: green;
-
             }
           }
         }
