@@ -1,5 +1,5 @@
 = form_for @item do |f|
-  .product-edit
+  .product-new
     .product-header
       = link_to image_tag("fmarket_logo_red.svg", size:"185x49",class:"product-header__img"), "/"
     %main.product-main
@@ -15,28 +15,29 @@
                       出品画像
                       %span.product-single__form-require 必須
                     %p.product-single__max-upload 最大10枚までアップロードできます
-                    .post__drop__box__container
-                      .prev-content
-                      .label-content
-                        %label{for: "item_images_attributes_0_image", class: "abel-box", id: "label-box--0"}
-                          %pre.label-box__text-visible クリックしてファイルをアップロード
-                      #image-box
-                        #previews
-                          - if @item.persisted?
-                            - @item.images.each_with_index do |image, i|
-                              = image_tag image.image.url, data: { index: i }, width: "100", height: '100' 
-                        = f.fields_for :images do |image|
-                          .js-file_group{"data-index" => image.index}
-                            = image.file_field :image, class:'js-file'
-                            .js-remove
-                              削除
-                          - if @item.persisted?
-                            = image.check_box :_destroy, data:{ index: image.index }, class: 'hidden-destroy'
-                        - if @item.persisted?
-                          .js-file_group{"data-index" => @item.images.count}
-                            = file_field_tag :image, name: "item[images_attributes][#{@item.images.count}][image]", class: 'js-file'
-                            .js-remove
-                              削除
+                  .product-single__post-drop-box
+                    .prev-content
+                      - @item.images.each do |image|
+                        .preview-box
+                          .upper-box
+                            = image_tag image.image.url, width: "112", height: "112", alt: "preview"
+                          .lower-box
+                            .update-box
+                              .update-btn
+                                %span 編集
+                            .delete-box
+                              .delete-btn
+                                %span 削除
+                    .label-content
+                      %label{ for:"item_images_attributes_0_image", class: "label-box", id: "label-box--0" }
+                        %pre.label-box__text-visible クリックしてファイルをアップロード
+                    .hidden-content
+                      = f.fields_for :images do |i|
+                        = i.file_field :image, class: "hidden-field"
+                        %input{class:"hidden-field", type: "file", name: "item[images_attributes][1][image]", id: "item_images_attributes_1_image" }
+                        %input{class:"hidden-field", type: "file", name: "item[images_attributes][2][image]", id: "item_images_attributes_2_image" }
+                        %input{class:"hidden-field", type: "file", name: "item[images_attributes][3][image]", id: "item_images_attributes_3_image" }
+                        %input{class:"hidden-field", type: "file", name: "item[images_attributes][4][image]", id: "item_images_attributes_4_image" }
                   .product-name
                     .product-name__sell-content
                       .product-name__form-name
@@ -63,12 +64,6 @@
                                 %i.detaile__icon-arrow-bottom
                                   = icon('fas','chevron-down')
                                 = f.collection_select :category, Category.all, :id, :name
-                          .detaile__form-brand
-                            %label.detaile__label
-                              ブランド
-                              %span.detaile__form-any 任意
-                            .detaile__select-wrap
-                              = f.text_area :brand, class: "detaile__select-wrap__text", placeholder: "例）シャネル"
                           .detaile__form-status
                             %label.detaile__label
                               商品の状態
@@ -93,14 +88,6 @@
                               = f.collection_select :delivery_chage, Delivery_chage.all, :id, :name
                           .delivery__form-group
                             %label.delivery__label
-                              配送の方法
-                              %span.delivery__form-require 必須
-                            .delivery__select-wrap
-                              %i.delivery__icon-arrow-bottom
-                                = icon('fas','chevron-down')
-                              = f.collection_select :delivery_method, Delivery_method.all, :id, :name
-                          .delivery__form-group
-                            %label.delivery__label
                               発送元の地域
                               %span.delivery__form-require 必須
                             .delivery__select-wrap
@@ -115,7 +102,7 @@
                               %i.delivery__icon-arrow-bottom
                                 = icon('fas','chevron-down')
                               = f.collection_select :delivery_date, Delivery_date.all, :id, :name
-                    .price              
+                    .price
                       .price__sell-content.clearfix
                         .price__box
                           %h3.price__sell-sub-head 販売価格(300〜9,999,999)
@@ -135,13 +122,11 @@
                               .price__l-left
                                 販売手数料 (10%)
                               .price__l-right
-                                ¥
-                                = @item.price*0.1
+                                -
                             %li.price__clearfix.price__bold
                               .price__l-left 販売利益
                               .price__l-right__money
-                                ¥
-                                = @item.price - @item.price*0.1
+                                -
                       .modal{role: "dialog", tabindex: "-1"}
                         .modal__inner
                     .caution
@@ -160,9 +145,9 @@
                             また、出品をもちまして
                             %a.caution__a{href: "/jp/seller_terms/"} 加盟店規約
                             に同意したことになります。
-                        = f.submit '変更する', class: 'price__btn-default.price__btn-red'
+                        = f.submit '出品する', class: 'price__btn-default.price__btn-red'
                         .price__btn 
-                          = link_to 'もどる', item_detail_mypage_path(@item), class:"price__btn-gray"
+                          = link_to 'もどる',root_path, class:"price__btn-gray"
               .overlay
         .product-footer
           .product-footer__center

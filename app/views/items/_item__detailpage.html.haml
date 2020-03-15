@@ -6,10 +6,10 @@
       .item__detailpage__box__main
         .item__detailpage__box__main__image
           .item__detailpage__box__main__image__top
-            = image_tag @item.images[0].image,size:"250x300", class:"item__detailpage__box__main__image__top__view"
-          .item__detailpage__box__main__image__bottom
+            = image_tag @item.images[0].image,size:"300x300", class:"view"
+          %ul.item__detailpage__box__main__image__bottom
             - @item.images.each_with_index do |image, i|
-              .item__detailpage__box__main__image__bottom__column
+              %li.item__detailpage__box__main__image__bottom__column
                 = image_tag image.image.url, data: { index: i }, width: "60", height: '60'
             %end
         .item__detailpage__box__main__text
