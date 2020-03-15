@@ -33,9 +33,10 @@
           padding: 0 30px;
 
           &__top{
-            // background-color: red;
             height: 300px;
-            
+            .view0 {
+              display: none;
+            }
           }
           &__bottom{
             display: fle;
